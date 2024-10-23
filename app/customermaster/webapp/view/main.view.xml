@@ -1,0 +1,59 @@
+<mvc:View controllerName="sravan.ust.customermaster.controller.main"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns="sap.m">
+    <Page id="page" title="Sravan">    
+        <Text text="Hello World"/>
+
+        <Table
+        id="customerTable"
+        inset="false"
+        items="{
+            path: 'customerModel>/'
+        }">
+        <headerToolbar>
+            <Toolbar>
+                <Title text="Customer Master Table" />
+            </Toolbar>
+        </headerToolbar>
+
+        <columns>
+            <Column>
+                <Text text="Customer Number" />
+            </Column>
+            <Column>
+                <Text text="Sold To" />
+            </Column>
+            <Column>
+                <Text text="Payer" />
+            </Column>
+            <Column>
+                <Text text="Contact Person" />
+            </Column>
+            <Column>
+                <Text text="Company Name" />
+            </Column>
+            <Column>
+                <Text text="Phone Number" />
+            </Column>
+        </columns>
+
+        <items>
+            <ColumnListItem>
+                <cells>
+                    <Text text="{customerModel>CustomerNumber}" />
+                    <Text text="{customerModel>Soldto}" />
+                    <Text text="{customerModel>Payer}" />
+                    <Text text="{customerModel>PARNR}" />
+                    <Text text="{customerModel>NAMEV}" />
+                    <Text text="{customerModel>TELF1}" />
+                </cells>
+            </ColumnListItem>
+        </items>
+    </Table>
+
+
+
+
+        
+    </Page>
+</mvc:View>
